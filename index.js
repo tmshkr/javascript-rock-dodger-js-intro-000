@@ -89,7 +89,7 @@ function createRock(x) {
 
      function step(){
        rock.style.top = `${topInt + 2}px`
-     }
+     }()
 
     /**
      * But if the rock *has* reached the bottom of the GAME,
