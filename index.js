@@ -84,12 +84,6 @@ function createRock(x) {
      * Otherwise, if the rock hasn't reached the bottom of
      * the GAME, we want to move it again.
      */
-     var topString = dodger.style.left.replace('px', '')
-     var topInt= parseInt(leftNumbers, 10)
-
-     function step(){
-       rock.style.top = `${topInt + 2}px`
-     }()
 
     /**
      * But if the rock *has* reached the bottom of the GAME,
@@ -97,8 +91,15 @@ function createRock(x) {
      */
   }
 
-  // We should kick of the animation of the rock around here
+  var topString = dodger.style.left.replace('px', '')
+  var topInt= parseInt(leftNumbers, 10)
 
+  function step(){
+    rock.style.top = `${topInt + 2}px`
+  }
+  
+  // We should kick of the animation of the rock around here
+  window.requestAnimationFrame(step)
   // Add the rock to ROCKS so that we can remove all rocks
   // when there's a collision
   ROCKS.push(rock)
