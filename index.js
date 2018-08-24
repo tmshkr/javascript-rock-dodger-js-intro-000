@@ -73,7 +73,7 @@ function endGame() {
   START.innerHTML = 'Play again?'
   START.style.display = 'inline'
 
-  return alert('YOU LOSE!')
+  return alert('GAME OVER')
 }
 
 function moveDodger(e) {
