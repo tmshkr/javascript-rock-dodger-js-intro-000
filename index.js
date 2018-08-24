@@ -88,7 +88,7 @@ function createRock(x) {
      var topInt= parseInt(leftNumbers, 10)
 
      function step(){
-       rock.style.top = `${topInt - 4}px`
+       rock.style.top = `${topInt + 2}px`
      }
 
     /**
