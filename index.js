@@ -84,7 +84,13 @@ function createRock(x) {
      * Otherwise, if the rock hasn't reached the bottom of
      * the GAME, we want to move it again.
      */
+     var topString = dodger.style.left.replace('px', '')
+     var topInt= parseInt(leftNumbers, 10)
 
+     function step(){
+       rock.style.top = `${topInt - 4}px`
+     }
+     
     /**
      * But if the rock *has* reached the bottom of the GAME,
      * we should remove the rock from the DOM
