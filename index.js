@@ -75,7 +75,6 @@ function createRock(x) {
   // when there's a collision
   ROCKS.push(rock)
 
-  // Finally, return the rock element you've created
   return rock
 }
 
