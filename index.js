@@ -83,11 +83,11 @@ function moveDodger(e) {
       e.stopPropagation()
     }
 
-   if (e.which === LEFT_ARROW) {
-      moveDodgerLeft()
-    } else if (e.which === RIGHT_ARROW) {
-      moveDodgerRight()
-    }
+ if (e.which === LEFT_ARROW) {
+    moveDodgerLeft()
+  } else if (e.which === RIGHT_ARROW) {
+    moveDodgerRight()
+  }
 
 }
 
@@ -110,7 +110,7 @@ function moveDodgerRight() {
     dodger.style.left = `${left + 4}px`
   }
 
-  if (left < 360) {
+  if (0 < left < 360) {
     window.requestAnimationFrame(step)
   }
 }
