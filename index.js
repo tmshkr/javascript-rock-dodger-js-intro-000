@@ -44,15 +44,13 @@ function createRock(x) {
 
   function moveRock() {
     rock.style.top = `${top += 2}px`
-    // implement me!
-    // (use the comments below to guide you!)
-    /**
-     * If a rock collides with the DODGER,
-     * we should call endGame()
-     */
 
-     if (top < GAME_HEIGHT) {
-       window.requestAnimationFrame(moveRock)
+    if (checkCollision(rock)) {
+      return endGame()
+    }
+
+    if (top < GAME_HEIGHT) {
+      window.requestAnimationFrame(moveRock)
      } else {
        rock.remove()
      }
@@ -73,6 +71,16 @@ function createRock(x) {
  * Finally, alert "YOU LOSE!" to the player.
  */
 function endGame() {
+  clearInterval(gameInterval)
+
+  ROCKS.forEach(function(rock) { rock.remove() })
+
+  document.removeEventListener('keydown', moveDodger)
+
+  START.innerHTML = 'Play again?'
+  START.style.display = 'inline'
+
+  return alert('YOU LOSE!')
 }
 
 function moveDodger(e) {
