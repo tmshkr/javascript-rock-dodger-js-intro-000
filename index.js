@@ -1,25 +1,16 @@
-/**
- * Don't change these constants!
- */
 const DODGER = document.getElementById('dodger')
 const GAME = document.getElementById('game')
 const GAME_HEIGHT = 400
 const GAME_WIDTH = 400
-const LEFT_ARROW = 37 // use e.which!
-const RIGHT_ARROW = 39 // use e.which!
+const LEFT_ARROW = 37
+const RIGHT_ARROW = 39
 const ROCKS = []
 const START = document.getElementById('start')
 
 var gameInterval = null
 
-/**
- * Be aware of what's above this line,
- * but all of your work should happen below.
- */
-
 function checkCollision(rock) {
-  // implement me!
-  // use the comments below to guide you!
+
   const top = positionToInteger(rock.style.top)
 
   // rocks are 20px high
@@ -58,8 +49,8 @@ function createRock(x) {
   rock.style.left = `${x}px`
 
   // Hmmm, why would we have used `var` here?
-  var top = rock.style.top = 0
-
+  var top = 0
+  rock.style.top = top
   /**
    * Now that we have a rock, we'll need to append
    * it to GAME and move it downwards.
