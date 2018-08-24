@@ -54,7 +54,6 @@ function createRock(x) {
       rock.remove()
     }
   }
-}
 
   window.requestAnimationFrame(moveRock)
   // Add the rock to ROCKS so that we can remove all rocks
