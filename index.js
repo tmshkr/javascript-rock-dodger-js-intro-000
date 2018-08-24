@@ -36,7 +36,6 @@ function createRock(x) {
   rock.className = 'rock'
   rock.style.left = `${x}px`
 
-  // Hmmm, why would we have used `var` here?
   var top = 0
   rock.style.top = top
 
@@ -78,14 +77,7 @@ function endGame() {
 }
 
 function moveDodger(e) {
-  // implement me!
-  /**
-   * This function should call `moveDodgerLeft()`
-   * if the left arrow is pressed and `moveDodgerRight()`
-   * if the right arrow is pressed. (Check the constants
-   * we've declared for you above.)
-   * And be sure to use the functions declared below!
-   */
+
    if (e.which === LEFT_ARROW) {
       moveDodgerLeft()
     } else if (e.which === RIGHT_ARROW) {
