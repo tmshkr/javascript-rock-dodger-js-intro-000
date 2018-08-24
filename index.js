@@ -90,7 +90,7 @@ function createRock(x) {
      function step(){
        rock.style.top = `${topInt - 4}px`
      }
-     
+
     /**
      * But if the rock *has* reached the bottom of the GAME,
      * we should remove the rock from the DOM
@@ -140,10 +140,7 @@ function moveDodgerLeft() {
   function step(){
     dodger.style.left = `${left - 4}px`
   }
-
-  if (left > 0) {
     window.requestAnimationFrame(step)
-  }
 }
 
 function moveDodgerRight() {
