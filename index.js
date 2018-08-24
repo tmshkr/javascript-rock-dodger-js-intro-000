@@ -91,13 +91,13 @@ function createRock(x) {
      */
   }
 
-  var topString = dodger.style.left.replace('px', '')
-  var topInt= parseInt(leftNumbers, 10)
+  var topString = rock.style.top.replace('px', '')
+  var topInt= parseInt(topString, 10)
 
   function step(){
     rock.style.top = `${topInt + 2}px`
   }
-  
+
   // We should kick of the animation of the rock around here
   window.requestAnimationFrame(step)
   // Add the rock to ROCKS so that we can remove all rocks
